@@ -6,6 +6,9 @@ body{
   min-height: 100vh;
   color: white;
 }
+.menu{
+    display: none;
+}
 header{
     display: flex;
 align-items: center;
@@ -292,4 +295,52 @@ background: rgba(255, 255, 255, 0.111);
     background-color: rgba(9, 73, 92, 0.644);
       resize: none;
       overflow-y: auto;
+}
+.che{
+    background-color: aqua;
+    width: 400px;
+    height: 300px;
+}
+
+@media (max-width:700px){
+   body{
+    background: rgb(0, 128, 102);
+   }
+   header{
+    display: flex;
+align-items: center;
+justify-content: space-between;
+position: sticky;
+top: 0px;
+z-index: 10;
+height: 80px;
+width: 800px;
+backdrop-filter: blur(7px);
+background: rgba(255, 255, 255, 0.111);
+}
+#logo{
+    margin-left: 60px;
+}
+
+.navlinks,a{
+    display: none;
+    gap: 40px;
+    margin-right: 20px;
+    color: rgb(33, 46, 231);
+    text-decoration: none;
+    color: white;
+}
+.menu{
+    display: block;
+    width: 50px;
+    height: 50px;
+    fill: rgb(166, 0, 255);
+    margin-right: 60px;
+    
+}
+.hpage{
+    display: flex;
+    margin-top: 100px;
+    gap: 50px;
+}
 }

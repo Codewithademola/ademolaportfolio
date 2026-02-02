@@ -9,6 +9,7 @@
 <body>
     <header>
         <h2 id="logo">Ademola</h2>
+         <svg class="menu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M0 80H448V96H0V80zM0 240H448v16H0V240zM448 400v16H0V400H448z"/></svg>
         <nav class="navlinks">
             <a href="#">Home</a>
             <a href="#about">About</a>
@@ -149,26 +150,25 @@
 
 </div>
 </footer>
+<!-- <div id="bd" class="che"> </div> -->
 <script>
     const contact =document.getElementById('submitbtn')
-    let name = document.getElementById("name").value.trim();
-    let email = document.getElementById('email').value.trim();
+    let name = document.getElementById("name").value;
+    let email = document.getElementById('email').value;
     let message = document.getElementById('message').value
+    let bd = document.getElementById('bd')
     submitbtn.onclick = function() {
         name.textContent='   ';
         email.textContent='   ';
         message.textContent='   ';
-        // if (name==="" || email===""){
-        //   alert("Fill");
-        //   return;
-        // }
+
         let text = encodeURIComponent(
-        `Hello i have a message from your website \n\nName: ${name}\nEmail: ${email}\lnMessage: ${message} `
+        `Hello i have a message from your website \n\nName: ${name.value}\nEmail: ${email.value}\lnMessage: ${message.value} `
     );
     alert('form submited via whatsapp')  
         let phone = '+23409152784329'
         window.open(`https://wa.me/${phone}?text =${text}`, "-blank");
-        
+       
     }
     
       
